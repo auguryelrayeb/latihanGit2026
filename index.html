@@ -3,14 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROFIL</title>
+    <title>PROFIL</title>    
 </head>
+<script lang="javascript">
+    let buatTabel = () => {
+        let tbl2_2 = document.createElement("table");
+
+        let row1 = document.createElement("tr");
+        let row2 = document.createElement("tr");
+        
+        let cell1_1 = document.createElement("td");
+        let cell1_2 = document.createElement("td");
+
+        let cell2_1 = document.createElement("td");
+        let cell2_2 = document.createElement("td");
+
+        cell1_1.innerHTML = "Nama";
+        cell2_1.innerHTML = "Augury El Rayeb";
+        cell1_2.innerHTML = "Umur";
+        cell2_2.innerHTML = "55 tahun";
+
+        row1.appendChild(cell1_1);
+        row1.appendChild(cell1_2);
+
+        row2.appendChild(cell2_1);
+        row2.appendChild(cell2_2);
+
+        tbl2_2.appendChild(row1);
+        tbl2_2.appendChild(row2);
+        tbl2_2.setAttribute("border", "1");
+        //document.body.appendChild(tbl2_2);
+
+        let divContact = document.getElementById("contact");
+        //divContact.innerHTML="Kosong";
+        divContact.appendChild(tbl2_2);
+
+    }
+</script>
 <body>
-    <div>
+    <a id="google-link" href="https://www.google.com">Google</a>
+    <a id="youtube-link" href="https://www.youtube.com">Youtube</a>
+    <div id="profile">
         <h1>PROFIL</h1>
         <p>Nama: Augury El Rayeb</p>
         <p>Umur: 55 tahun</p>
         <p>Pekerjaan: Dosen</p>
     </div>
+    <div id="contact">
+        <h2>Contact</h2>
+        <p>Email:q
+    </div>
+    <button onclick="document.write('What is JavaScript?');">Tulis ulang</button>>
+    <button onclick="buatTabel();">buat tabel</button>
 </body>
+
 </html>
