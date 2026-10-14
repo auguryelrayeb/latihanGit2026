@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kotak {
+            /*width: 50%; */
+            height: 120px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        /*desktop*/
+        .kotak1 {
+            width: 100%;
+        }
+        .kotak2 {
+            width: 25%;
+        }
+        .kotak3 {
+            width: 50%;
+        }
+        .kotak4 {
+            width: 25%;
+        }
+        
+        /*Tablet Landscape */
+        @media screen and (max-width: 1024px) {
+            .kotak1 {
+                width: 100%;
+            }
+            .kotak2 {
+                width: 25%;
+            }
+            .kotak3 {
+                width: 50%;
+            }
+            .kotak4 {
+                width: 25%;
+            }
+        }
+
+        /*Tablet*/
+        @media screen and (max-width: 768px) {
+            .kotak1 {
+                width: 100%;
+            }
+            .kotak2 {
+                width: 25%;
+            }
+            .kotak3 {
+                width: 75%;
+            }
+            .kotak4 {
+                width: 100%;
+            }
+        }
+        /*Smartphone*/
+        @media screen and (max-width: 430px) {
+            .kotak1 {
+                width: 100%;
+            }
+            .kotak2 {
+                width: 100%;
+            }
+            .kotak3 {
+                width: 100%;
+            }
+            .kotak4 {
+                width: 100%;
+            }
+        }
+        
+        .normal {
+            height: 50px;
+            background-color: gray;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kotak kotak1">kotak 1</div>
+        <div class="kotak kotak2">kotak 2</div>
+        <div class="kotak kotak3">kotak 3</div>
+        <div class="kotak kotak4">kotak 4</div>
+        <div class="normal">normal</div>
+    </div>
+</body>
+</html>

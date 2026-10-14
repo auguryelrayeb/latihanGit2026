@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan DOM</title>
+    <script lang="javascript">
+        let tambahData = () => {
+            let nim = document.getElementById("nim").value;
+            let nama = document.getElementById("nama").value;
+
+            let tabel = document.getElementById("tabelData");
+            let barisData = document.createElement("tr");
+            let cellNim = document.createElement("td");
+            let cellNama = document.createElement("td");
+
+            cellNim.innerHTML = nim;
+            cellNama.innerHTML = nama;
+
+            barisData.appendChild(cellNim);
+            barisData.appendChild(cellNama);
+            tabel.appendChild(barisData);
+
+        }
+        </script>
+</head>
+<body>
+    <label for="nim">NIM:</label><input type="text" id="nim" name="nim"><br><br>
+    <label for="nama">Nama:</label><input type="text" id="nama" name="nama"><br><br>
+    <button onclick="tambahData();">Add</button>
+    <hr>
+    <table id="tabelData" border="1">
+        <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+        </tr>
+    </table>
+
+</body>
+</html>

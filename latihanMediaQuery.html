@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Media Query</title>
+    <style>
+        .kotak {
+            width: 100%;
+            height: 120px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            background: red;
+        } 
+        @media screen and (max-width: 430px) {
+            .kotak {
+                width: 100%;
+                background: green;
+            }
+        }
+        @media screen and (max-width: 300px) {
+            .kotak {
+                width: 100%;
+                background: yellow;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="kotak kotak1">kotak 1</div>
+</body>
+</html>

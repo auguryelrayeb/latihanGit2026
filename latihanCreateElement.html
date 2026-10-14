@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Create Element</title>
+    <script language="javascript">
+        let tambahMhs = () => {
+            let nim = document.getElementById("txtNim").value;
+            let nama = document.querySelector("#txtNama").value;
+            let tbl1 = document.querySelector("#tblMahasiswa");
+            let baris = document.createElement("tr"); //membuat row
+            let data1 = document.createElement("td"); //membuat cell
+            let data2 = document.createElement("td"); //membuat cell
+            data1.innerHTML = nim; //mengisi cell dengan nim
+            data2.innerHTML = nama; //mengisi cell dengan nama
+            baris.appendChild(data1);
+            baris.appendChild(data2);
+            tbl1.appendChild(baris);
+        }
+    </script>
+</head>
+<body>
+    <label for="input">NIM :</label><input type="text" id="txtNim" placeholder="Masukkan NIM">
+    <label for="input">Nama :</label><input type="text" id="txtNama" placeholder="Masukkan Nama">
+    <button id="btnTambah" onclick="tambahMhs();">Tambah</button>
+    <hr>
+    <table border="1" id="tblMahasiswa">
+        <tr>
+            <th>NIM</th>
+            <th>NAMA</th>
+        </tr>
+
+    </table>    
+
+</body>
+
+</html>

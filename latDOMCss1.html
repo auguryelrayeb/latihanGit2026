@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Display & Visibility</title>
+    <style>
+        .kotak {
+            width: 50%;
+            height: 120px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+    <button onclick="tampilkan()" id="tampilkan" disabled>TAMPIL</button>
+    <button onclick="hilangkan()" id="hilangkan">HILANG</button>
+    <div class="kotak kotak1">kotak 1</div>
+    <div class="kotak kotak2">kotak 2</div>
+    <div class="kotak kotak3">kotak 3</div>
+
+    <script>
+        function tampilkan() {
+            document.getElementById('tampilkan').disabled = true;
+            document.getElementById('hilangkan').disabled = false;
+            document.querySelector('.kotak2').style.display = 'block';
+        }
+
+        function hilangkan() {
+            document.getElementById('tampilkan').disabled = false;
+            document.getElementById('hilangkan').disabled = true;
+            document.querySelector('.kotak2').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
